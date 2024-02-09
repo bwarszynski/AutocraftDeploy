@@ -17,7 +17,7 @@ const port = process.env.PORT || 8000;
 
 
 const corsOptions = {
-    origin: ["https://autocraft-app.onrender.com"],
+    origin: ["http://localhost:5173","https://autocraft-app.onrender.com"],
 }
 
 app.get("/", (req, res) => {
