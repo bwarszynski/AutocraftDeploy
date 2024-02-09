@@ -15,8 +15,9 @@ dotenv.config()
 const app = express();
 const port = process.env.PORT || 8000;
 
+
 const corsOptions = {
-    origin: true,
+    origin: ["https://autocraft-app.onrender.com"],
 }
 
 app.get("/", (req, res) => {
@@ -43,7 +44,6 @@ app.use('/api/v1/users', userRoute); //domena/api/v1/users/:id
 app.use('/api/v1/mechanics', mechanicRoute); //domena/api/v1/mechanics/:id
 app.use('/api/v1/reviews', reviewRoute); //domena/api/v1/reviews/
 app.use('/api/v1/bookings', bookingRoute); //domena/api/v1/bookings/
-
 
 app.listen(port, () => {
     connectDB();
